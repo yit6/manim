@@ -115,6 +115,8 @@ def prompt_user_for_choice(scene_classes):
         sys.exit(2)
     except EOFError:
         sys.exit(1)
+    except ValueError:
+        print("No scenes choosen. Exiting")
 
 
 def scene_classes_from_file(file_path, require_single_scene=False, full_list=False):
